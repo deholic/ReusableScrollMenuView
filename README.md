@@ -6,6 +6,8 @@
 
 Horizontal scrollable menu for UITableView header.
 
+![](https://media.giphy.com/media/dYga0vdTgrzIacihwk/giphy.gif)
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
