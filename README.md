@@ -1,9 +1,10 @@
 # ReusableScrollMenuView
 
-[![CI Status](https://img.shields.io/travis/KIM EUIGYOM/ReusableScrollMenuView.svg?style=flat)](https://travis-ci.org/KIM EUIGYOM/ReusableScrollMenuView)
 [![Version](https://img.shields.io/cocoapods/v/ReusableScrollMenuView.svg?style=flat)](https://cocoapods.org/pods/ReusableScrollMenuView)
 [![License](https://img.shields.io/cocoapods/l/ReusableScrollMenuView.svg?style=flat)](https://cocoapods.org/pods/ReusableScrollMenuView)
 [![Platform](https://img.shields.io/cocoapods/p/ReusableScrollMenuView.svg?style=flat)](https://cocoapods.org/pods/ReusableScrollMenuView)
+
+Horizontal scrollable menu for UITableView header.
 
 ## Example
 
@@ -22,7 +23,7 @@ pod 'ReusableScrollMenuView'
 
 ## Author
 
-KIM EUIGYOM, deholexp@gmail.com
+Euigyom Kim, deholexp@gmail.com
 
 ## License
 
