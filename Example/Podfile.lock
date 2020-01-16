@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ReusableScrollMenuView: 06598b3c82a337cc799d0ec2afb1fd71a402ea90
+  ReusableScrollMenuView: 73c7065424ee0360d5eb20e5b1ba8800a74c2b2b
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
 
 PODFILE CHECKSUM: 8ccf3b2ab0c0efc87aedad13ce51c9ff65d8e003
