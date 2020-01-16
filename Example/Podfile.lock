@@ -1,0 +1,23 @@
+PODS:
+  - ReusableScrollMenuView (0.1.0):
+    - SnapKit
+  - SnapKit (4.2.0)
+
+DEPENDENCIES:
+  - ReusableScrollMenuView (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - SnapKit
+
+EXTERNAL SOURCES:
+  ReusableScrollMenuView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ReusableScrollMenuView: 06598b3c82a337cc799d0ec2afb1fd71a402ea90
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+
+PODFILE CHECKSUM: 8ccf3b2ab0c0efc87aedad13ce51c9ff65d8e003
+
+COCOAPODS: 1.8.4
