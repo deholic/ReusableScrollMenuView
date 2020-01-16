@@ -22,6 +22,10 @@ open class ReusableScrollMenuView: UITableViewHeaderFooterView {
 
     static public let reuseIdentifier: String = String(describing: self)
     
+    dynamic open var bgColor: UIColor = .white {
+        didSet { updateAppearance() }
+    }
+    
     dynamic open var normalColor: UIColor = .gray {
         didSet { updateAppearance() }
     }
@@ -38,7 +42,7 @@ open class ReusableScrollMenuView: UITableViewHeaderFooterView {
         didSet { updateAppearance() }
     }
     
-    dynamic open var highlightFontWeight: UIFont.Weight = .bold {
+    dynamic open var fontWeight: UIFont.Weight = .medium {
         didSet { updateAppearance() }
     }
     
@@ -213,15 +217,17 @@ extension ReusableScrollMenuView {
     }
     
     private func updateAppearance() {
+        bgView.backgroundColor = bgColor
         separator.backgroundColor = seperatorColor
         updateMenuHighlight(at: [currentIndex])
         menuStackView.arrangedSubviews.compactMap({ $0 as? MenuItemView }).forEach({ updateMenuViewAppearance($0) })
     }
     
     private func updateMenuViewAppearance(_ view: MenuItemView) {
+        view.bgColor = bgColor
         view.fontSize = fontSize
+        view.fontWeight = fontWeight
         view.normalColor = normalColor
         view.highlightColor = highlightColor
-        view.highlightFontWeight = highlightFontWeight
     }
 }

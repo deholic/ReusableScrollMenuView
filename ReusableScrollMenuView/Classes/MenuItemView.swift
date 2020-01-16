@@ -11,11 +11,15 @@ import SnapKit
 
 class MenuItemView: UIView {
     
+    dynamic var bgColor: UIColor = .white {
+        didSet { self.backgroundColor = bgColor }
+    }
+    
     dynamic var fontSize: CGFloat = 14 {
         didSet { updateLabelAppearance() }
     }
     
-    dynamic var highlightFontWeight: UIFont.Weight = .bold {
+    dynamic var fontWeight: UIFont.Weight = .bold {
         didSet { updateLabelAppearance() }
     }
     
@@ -81,7 +85,7 @@ class MenuItemView: UIView {
     }
     
     private func updateLabelAppearance() {
-        titleLabel.font = .systemFont(ofSize: fontSize, weight: isHighlighedMenu ? highlightFontWeight : .regular)
+        titleLabel.font = .systemFont(ofSize: fontSize, weight: fontWeight)
         titleLabel.textColor = isHighlighedMenu ? highlightColor : normalColor
     }
     
