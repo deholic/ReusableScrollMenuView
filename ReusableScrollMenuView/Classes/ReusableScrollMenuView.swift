@@ -9,44 +9,44 @@
 import UIKit
 import SnapKit
 
-protocol ReusableScrollMenuViewDelegate: class {
+public protocol ReusableScrollMenuViewDelegate: class {
     func headerMenuView(_ headerMenuView: ReusableScrollMenuView, didSelectMenu index: Int)
 }
 
-protocol ReusableScrollMenuViewDataSource: class {
+public protocol ReusableScrollMenuViewDataSource: class {
     func titlesForMenuView(_ menuView: ReusableScrollMenuView) -> [String]
     func selectedIndexForMenuView(_ menuView: ReusableScrollMenuView) -> Int?
 }
 
-class ReusableScrollMenuView: UITableViewHeaderFooterView {
+open class ReusableScrollMenuView: UITableViewHeaderFooterView {
 
-    static let reuseIdentifier: String = String(describing: self)
+    static public let reuseIdentifier: String = String(describing: self)
     
-    dynamic var normalColor: UIColor = .gray {
+    dynamic open var normalColor: UIColor = .gray {
         didSet { updateAppearance() }
     }
     
-    dynamic var highlightColor: UIColor = .black {
+    dynamic open var highlightColor: UIColor = .black {
         didSet { updateAppearance() }
     }
     
-    dynamic var highlightUnderlineHeight: CGFloat = 2.0 {
+    dynamic open var highlightUnderlineHeight: CGFloat = 2.0 {
         didSet { updateAppearance() }
     }
     
-    dynamic var fontSize: CGFloat = 14 {
+    dynamic open var fontSize: CGFloat = 14 {
         didSet { updateAppearance() }
     }
     
-    dynamic var highlightFontWeight: UIFont.Weight = .bold {
+    dynamic open var highlightFontWeight: UIFont.Weight = .bold {
         didSet { updateAppearance() }
     }
     
-    dynamic var seperatorColor: UIColor = .lightGray {
+    dynamic open var seperatorColor: UIColor = .lightGray {
         didSet { updateAppearance() }
     }
     
-    dynamic var currentIndex: Int = 0 {
+    dynamic open var currentIndex: Int = 0 {
         didSet {
             if currentIndex != oldValue {
                 updateMenuHighlight(at: [currentIndex, oldValue])
@@ -86,17 +86,17 @@ class ReusableScrollMenuView: UITableViewHeaderFooterView {
         return view
     }()
     
-    weak var delegate: ReusableScrollMenuViewDelegate?
-    weak var dataSource: ReusableScrollMenuViewDataSource? {
+    weak open var delegate: ReusableScrollMenuViewDelegate?
+    weak open var dataSource: ReusableScrollMenuViewDataSource? {
         didSet { setupViews() }
     }
     
-    override init(reuseIdentifier: String?) {
+    override public init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
         setupViews()
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         super.init(coder: coder)
     }
     
