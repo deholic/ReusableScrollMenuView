@@ -10,33 +10,15 @@ Pod::Spec.new do |s|
   s.name             = 'ReusableScrollMenuView'
   s.version          = '0.1.0'
   s.summary          = 'Horizontal scrollable menu for UITableView header.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
-
+  s.description      = 'Horizontal scrollable menu for UITableView header. Customizable, Flexable, etc...'
   s.homepage         = 'https://github.com/deholic/ReusableScrollMenuView'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'KIM EUIGYOM' => 'deholexp@gmail.com' }
   s.source           = { :git => 'https://github.com/deholic/ReusableScrollMenuView.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
   s.ios.deployment_target = '10.0'
-
-  s.source_files = 'ReusableScrollMenuView/Classes/**/*'
+  s.source_files     = 'ReusableScrollMenuView/Classes/**/*'
+  s.swift_version    = '5.0'
+  s.frameworks       = 'UIKit'
   
-  # s.resource_bundles = {
-  #   'ReusableScrollMenuView' => ['ReusableScrollMenuView/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  s.frameworks = 'UIKit'
   s.dependency 'SnapKit'
 end

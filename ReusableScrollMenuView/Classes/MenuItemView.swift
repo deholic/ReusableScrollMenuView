@@ -44,8 +44,6 @@ class MenuItemView: UIView {
         set { titleLabel.text = newValue }
     }
     
-    var menuView: ReusableScrollMenuView!
-    
     lazy private var titleLabel: UILabel = {
         let label = UILabel()
         return label
